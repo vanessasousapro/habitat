@@ -68,10 +68,10 @@ O **Habitat** oferece uma experiência simples e motivadora:
 
 ## 👩‍💻 Desenvolvedora
 
-Desenvolvido por **Vanessa Sousa**.
+Desenvolvido por **Vanessa Amancio**.
 
 ---
 
 <p align="center">
-  Feito com dedicação 🌱 para ajudar pessoas a evoluírem um hábito por vez.
+  Feito com carinho 🌱 para ajudar pessoas a evoluírem um hábito por vez.
 </p>
