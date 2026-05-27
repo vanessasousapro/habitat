@@ -1,11 +1,11 @@
 package br.com.habitat
 
+import android.content.Intent
 import android.os.Bundle
-import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.google.firebase.auth.FirebaseAuth
 import br.com.habitat.databinding.ActivityMainBinding
+import com.google.firebase.auth.FirebaseAuth
 
 class MainActivity : AppCompatActivity() {
 
@@ -64,7 +64,9 @@ class MainActivity : AppCompatActivity() {
         auth.signInWithEmailAndPassword(email, senha)
             .addOnSuccessListener {
                 Toast.makeText(this, "Bem-vinda! 🌱", Toast.LENGTH_SHORT).show()
-                // TODO: navegar para HomeActivity
+                val intent = Intent(this, HomeActivity::class.java)
+                intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                startActivity(intent)
             }
             .addOnFailureListener {
                 binding.btnAcao.isEnabled = true
@@ -77,11 +79,14 @@ class MainActivity : AppCompatActivity() {
         auth.createUserWithEmailAndPassword(email, senha)
             .addOnSuccessListener {
                 Toast.makeText(this, "Conta criada com sucesso! 🌱", Toast.LENGTH_SHORT).show()
-                // TODO: navegar para HomeActivity
+                val intent = Intent(this, HomeActivity::class.java)
+                intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                startActivity(intent)
             }
             .addOnFailureListener {
                 binding.btnAcao.isEnabled = true
-                Toast.makeText(this, "Erro ao criar conta. Tente novamente.", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Erro ao criar conta. Tente novamente.", Toast.LENGTH_SHORT)
+                    .show()
             }
     }
 
@@ -89,11 +94,11 @@ class MainActivity : AppCompatActivity() {
         if (isLoginMode) {
             binding.tvFormTitle.text = "Entrar"
             binding.btnAcao.text = "Entrar"
-            binding.tvAlternar.text = "Não tem conta? Cadastre-se"
+            binding.tvAlternar.text = "Não tem conta?"
         } else {
             binding.tvFormTitle.text = "Cadastrar"
             binding.btnAcao.text = "Cadastrar"
-            binding.tvAlternar.text = "Já tem conta? Entrar"
+            binding.tvAlternar.text = "Já tem conta?"
         }
     }
 }
