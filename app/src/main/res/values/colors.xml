@@ -1,5 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Primary -->
+    <color name="green_dark">#2E7D32</color>
+    <color name="green_medium">#43A047</color>
+
+    <!-- Accent -->
+    <color name="purple">#7B1FA2</color>
+
+    <!-- Background e Surface -->
+    <color name="background">#F9FAF9</color>
+    <color name="surface">#FFFFFF</color>
+
+    <!-- Feedback -->
+    <color name="success">#43A047</color>
+    <color name="error">#C62828</color>
+
+    <!-- Neutros -->
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 </resources>
