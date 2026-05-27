@@ -3,19 +3,25 @@
     <!-- Primary -->
     <color name="green_dark">#2E7D32</color>
     <color name="green_medium">#43A047</color>
+    <color name="green_pastel">#C8E6C9</color>
+
+    <!-- Morango -->
+    <color name="red_dark">#B71C1C</color>
+    <color name="red_medium">#E53935</color>
 
     <!-- Accent -->
     <color name="purple">#7B1FA2</color>
+    <color name="purple_pastel">#E1BEE7</color>
 
     <!-- Background e Surface -->
     <color name="background">#F9FAF9</color>
     <color name="surface">#FFFFFF</color>
+    <color name="black">#FF000000</color>
 
     <!-- Feedback -->
     <color name="success">#43A047</color>
     <color name="error">#C62828</color>
 
     <!-- Neutros -->
-    <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 </resources>
